@@ -5,10 +5,13 @@
 # - 4 -> [1, 2, 6, 24]
 # - 6 -> [1, 2, 6, 24, 120, 720]
 
-n = int(input("Enter number: "))
-lis = list()
-f = 1
-for i in range(1, n+1):
-    lis.append(f * i)
-    f = f * i
-print(f"{n} -> {lis}")
+n = int(input("Введите положительное число: "))
+if n <= 0:
+    print ("Введено недопустимое значение, повторите попытку")
+else:
+    lis = list()
+    f = 1
+    for i in range(1, n+1):
+        lis.append(f * i)
+        f = f * i
+    print(f"{n} -> {lis}")
